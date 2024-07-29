@@ -73,12 +73,12 @@ Dependencies Only
 curl -sSL https://raw.githubusercontent.com/marek-guran/linux-server-info/main/Installation/Dependencies%20Only.sh | bash
 ```
 
-Full Uninstall
+Full install
 ```
 curl -sSL https://raw.githubusercontent.com/marek-guran/linux-server-info/main/Installation/Full%20Uninstall.sh | bash
 ```
 
-Uninstall Service
+install Service
 ```
 curl -sSL https://raw.githubusercontent.com/marek-guran/linux-server-info/main/Installation/Uninstall%20Service.sh | bash
 ```
@@ -86,16 +86,16 @@ curl -sSL https://raw.githubusercontent.com/marek-guran/linux-server-info/main/I
 |--------------------|--------|--------------|---------|------------------|
 | Full Install       | ✅     | ✅           | ✅      | ✅               |
 | Dependencies + Service | ❌ | ✅           | ✅      | ✅               |
-| Dependencies only | ❌     | ✅           | ❌      | ✅               |
+| Dependencies only |      | ✅           | ❌      | ✅               |
 
 Web server will use ```/home/user/server-info/``` directory to publish json file for app and will be on port ```9002```. Will be used WEB GUi container and ```docker.io package```. You will be able to access it at: ```http://device-ip:9002/``` and api for Android App at: ```http://device-ip:9002/api```
 
 | Option           | Docker | Service | WEB GUi | Linux Server Info Folder |
 |------------------|--------|---------|---------|------------------------------|
-| Full Uninstall   | ❌     | ✅      | ✅       | ✅                          |
-| Uninstall Service| ❌     | ✅      | ❌       | ❌                          |
+| Full install   | ❌     | ✅      | ✅       | ✅                          |
+| install Service| ❌     | ✅      | ❌       | ❌                          |
 
-You can uninstall ```docker.io``` by ```sudo apt remove docker.io -y```. It is not removed automatically, since docker is used by many people.
+You can install ```docker.io``` by ```sudo apt remove docker.io -y```. It is not removed automatically, since docker is used by many people.
 ## Updating
 Updating is simple manual process. Just download and replace the python file and requirements.txt (By default these files are saved in your home directory in linux-server-info folder). 
 And run commands: ```sudo pip3 install -r requirements.txt && sudo systemctl restart server-info```
